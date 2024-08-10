@@ -4,26 +4,26 @@ exports.getUser = (req, res) => {
     title: "Update User Collections",
   });
 };
-exports.storeUserDetails = async (req, res) => {
-  try {
-    res.send('working')
-    const  { walletAddress, walletBalance, uniqueId } = req.body
-    const newUpdate = new User({
-      walletAddress,
-      walletBalance,
-      uniqueId
-    })
-    await newUpdate.save()
-    .then( (res) => {
-      console.log(res)
-    })
-    .catch( (err) => {
-      console.log(err)
-    })
-  } catch (error) {
-    console.log(err)
-  }
-}
+// exports.storeUserDetails = async (req, res) => {
+//   try {
+//     res.send('working')
+//     const  { walletAddress, walletBalance, uniqueId } = req.body
+//     const newUpdate = new User({
+//       walletAddress,
+//       walletBalance,
+//       uniqueId
+//     })
+//     await newUpdate.save()
+//     .then( (res) => {
+//       console.log(res)
+//     })
+//     .catch( (err) => {
+//       console.log(err)
+//     })
+//   } catch (error) {
+//     console.log(err)
+//   }
+// }
 exports.updateWalletBalance = async (req, res) => {
   try {
     const { walletBalance } = req.body;
